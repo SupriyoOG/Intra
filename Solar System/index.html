@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solar System</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/loading.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <canvas id="bg"></canvas>
+
+    <div class="loader">
+      <div class="loading-container">
+        <p>Loading...</p>
+        <div class="loader-container">
+          <div class="loading-bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <main style="display: none">
+      <div id="info-tab" class="info">
+          <h3 id="name">Select a planet.</h3>
+          <button id="close">&blacktriangleleft;</button>
+        <p style="font-family: Jetbrains Mono;" id="desc">Click on a planet to view its description.</p>
+        <button id="learn">Learn More</button>
+      </div>
+
+	  <div id="planet-name" class="planet-name"></div>
+
+	</div>
+    </main>
+
+    <!-- ask for fullscreen and audio -->
+    <div class="confirm-container" id="fullscreen">
+      <div class="confirm">
+        <p>Fullscreen for best experience!</p>
+        <div class="buttons">
+          <button onclick="toggleFullscreen()">Cancel</button>
+          <button onclick="toggleFullscreen(true)">OK</button>
+        </div>
+        <button>Click here to test Audio</button>
+      </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/main.js"></script>
+    <script type="module" src="solar.js"></script>
+  </body>
+</html>
