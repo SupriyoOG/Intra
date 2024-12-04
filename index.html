@@ -2,28 +2,42 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Loader</title>
-    <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Basic</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="loading.css">
 </head>
 
 <body>
-    <!-- Loader Section -->
-    <div class="loader">
-        <p>Loading...</p>
-        <div class="loader-container">
-            <div class="loading-bar"></div>
+        <!-- Loader Section -->
+        <div class="loader">
+                <div class="loading-container">
+                        <p>Loading...</p>
+                        <div class="loader-container">
+                                <div class="loading-bar"></div>
+                        </div>
+                </div>
         </div>
-    </div>
 
-    <!-- Main Content -->
-    <main style="display: none;">
-        <h1>Welcome to My Webpage</h1>
-        <p>Your content has fully loaded!</p>
-    </main>
+        <!-- Main Content -->
+        <main style="display: none;">
 
-    <script src="main.js"></script>
+                <div class="confirm-container">
+                        <div class="confirm">
+                                <p>Fullscreen for best experience!</p>
+                                <div class="buttons">
+                                        <button>Cancel</button>
+                                        <button>OK</button>
+                                </div>
+                        </div>
+                </div>
+
+
+
+        </main>
+
+        <script src="main.js"></script>
 </body>
 
 </html>
