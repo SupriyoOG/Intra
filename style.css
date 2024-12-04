@@ -1,0 +1,91 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle, #fca311, #14213d);
+    font-family: 'Orbitron', sans-serif;
+    color: #f4f4f4;
+    overflow: hidden; /* Prevent scrolling during loading */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Loader Styles */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #14213d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 9999;
+}
+
+.loader p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fca311;
+    text-shadow: 0 0 0.5rem #fca311, 0 0 1rem #fca311;
+    animation: glow 1.5s infinite;
+}
+
+.loader-container {
+    position: relative;
+    width: 70%;
+    height: 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 2px solid #fca311;
+    box-shadow: 0 0 1rem #fca311, inset 0 0 0.5rem #fca311;
+}
+
+.loading-bar {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #ff6700, #fca311, #ffe500);
+    background-size: 200% 200%;
+    animation: moveBar 5s linear infinite;
+    transition: .3s ease
+}
+
+/* Animations */
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 0.5rem #fca311, 0 0 1rem #fca311;
+    }
+    50% {
+        text-shadow: 0 0 1rem #fca311, 0 0 2rem #fca311;
+    }
+}
+
+@keyframes moveBar {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Fade-out animation */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
